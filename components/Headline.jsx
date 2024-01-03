@@ -9,5 +9,5 @@ const Headline = (props) => {
         </>
     );
   };
-
+  
 export default Headline;

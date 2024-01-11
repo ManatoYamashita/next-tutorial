@@ -11,6 +11,8 @@ import { Nav } from '../components/Nav'
 export default function Home() {
 
   const [count, setCount] = useState(0);
+  const [text, setText] = useState('');
+  const [isShow, setIsShow] = useState(false);
 
   const handleClick = useCallback((e) => {
     if(count < 10) {
@@ -32,11 +34,36 @@ export default function Home() {
     }
   }, [count]);
 
+  const handleChange = useCallback((e) => {
+    if(e.target.value.length > 5) {
+      alert('5文字以内にしてください。');
+      return;
+    }
+    setText(e.target.value.trim());
+  }, []);
+
+  const handleDisplay = useCallback(() => {
+    setIsShow((isShow) => !isShow);
+  }, []);
+
   return (
     <main className={style.main}>
       <Nav />
       <Headline title="Index Page" page="page" />
-      <h1>{ count }</h1>
+      {isShow ? <h1>{ count }</h1> : null}
+      <input 
+        type="text" 
+        value={text} 
+        onChange={handleChange}
+      />
+      <button 
+        className={style.btn}
+        onClick={
+          handleDisplay
+        }
+      >
+          {isShow ? "非表示" : "表示"}
+      </button>
       <button className={style.btn} onClick={handleClick}>Button</button>
       <Links />
       <Footer />

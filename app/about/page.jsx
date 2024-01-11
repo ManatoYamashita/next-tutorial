@@ -9,15 +9,10 @@ import { Nav } from '../../components/Nav'
 export function About() {
   return (
     <main className={styles.main}>
-      
       <Nav />
-
       <Headline title="About Page" page="about" />
-
       <Links />
-
       <Footer />
-
     </main>
   );
 }

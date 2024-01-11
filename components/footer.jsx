@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../app/page.module.css'
+import style from '../styles/footer.module.css'
 
 export function Footer() {
     return (
@@ -13,7 +13,7 @@ export function Footer() {
             <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
-                className={styles.vercelLogo}
+                className={style.vercelLogo}
                 width={100}
                 height={24}
                 priority

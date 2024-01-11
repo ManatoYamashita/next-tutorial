@@ -1,12 +1,11 @@
-import styles from '../app/page.module.css'
-
+import style from '../styles/header.module.css'
 
 export function Header(props) {
   return (
-    <header className={styles.description}>
+    <header className={style.description}>
       <p>
       Get started by editing&nbsp;
-      <code className={styles.code}>app/{ props.page }.js</code>
+      <code className={style.code}>app/{ props.page }.jsx</code>
       </p>
       {/* <NextLink href="/about">
         About Page

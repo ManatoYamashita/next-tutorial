@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  border-radius: var(--border-radius);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+}
+
+/* @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

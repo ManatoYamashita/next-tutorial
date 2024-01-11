@@ -1,13 +1,13 @@
 import { Header } from './header';
-import style from '../app/page.module.css';
+import style from '../styles/header.module.css';
 
 const Headline = (props) => {
     return (
         <>
-            <h1 className={style.title}>{ props.title }</h1>
+            <h1 className={style.center}>{ props.title }</h1>
             <Header page={props.page} />
         </>
     );
   };
-  
+
 export default Headline;
